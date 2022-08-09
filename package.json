@@ -44,7 +44,7 @@
     "@testing-library/react": "^11.2.4",
     "@testing-library/react-hooks": "8.0.1",
     "@types/node": "16.11.47",
-    "@types/react": "^17.0.8",
+    "@types/react": "18.0.17",
     "@typescript-eslint/eslint-plugin": "5.33.0",
     "@typescript-eslint/parser": "5.33.0",
     "autoprefixer": "^10.2.6",
