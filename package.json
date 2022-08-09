@@ -41,7 +41,7 @@
     "@storybook/builder-webpack5": "^6.2.9",
     "@storybook/react": "6.5.10",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.4",
+    "@testing-library/react": "13.3.0",
     "@testing-library/react-hooks": "8.0.1",
     "@types/node": "16.11.47",
     "@types/react": "^17.0.8",
