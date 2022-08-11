@@ -101,10 +101,14 @@ function setFlag(city: string) {
       flag = '🇦🇹'
       break
     case 'at-fra-1':
+      flag = '🇩🇪'
+      break
     case 'de-muc-1':
       flag = '🇩🇪'
       break
     case 'ch-dk-2':
+      flag = '🇨🇭'
+      break
     case 'ch-gva-2':
       flag = '🇨🇭'
       break
