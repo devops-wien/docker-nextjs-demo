@@ -6,6 +6,7 @@ import ImageLink from '@/components/ImageLink/ImageLink'
 
 const gitRawMediaUrl = 'https://raw.githubusercontent.com/devops-wien/devops-wien-assets/main/images/'
 const zone = process.env.NEXT_PUBLIC_ZONE ? process.env.NEXT_PUBLIC_ZONE : 'local'
+const env_name = process.env.NEXT_PUBLIC_ENV_NAME ? process.env.NEXT_PUBLIC_ENV_NAME : 'dev'
 
 const zones = ['at-vie-1', 'bg-sof-1', 'ch-dk-2', 'ch-gva-2', 'de-fra-1', 'de-muc-1']
 
@@ -73,11 +74,13 @@ export default function IndexPage() {
 }
 
 function getUrlFromZone(zone: string) {
-  return 'https://nextjs-' + zone + '-dev.devops.wien'
+  return 'https://nextjs-' + zone + '-' + env_name + '.devops.wien'
 }
 
 async function zoneIsAvailable(zone: string) {
-  return (await fetch(getUrlFromZone(zone))).ok
+  return await fetch(getUrlFromZone(zone))
+    .then((res) => res.ok)
+    .catch(() => false)
 }
 
 async function getAvailableUrlFromDifferentZone(zone: string) {
