@@ -10,7 +10,9 @@ export interface Props {
 export const ImageLink: FC<Props> = ({ imageSrc, href }) => {
   return (
     <Link href={href} className="relative">
-      <Image src={imageSrc} layout="responsive" width="100px" height="50px" />
+      <a>
+        <Image src={imageSrc} layout="responsive" width="100px" height="50px" />
+      </a>
     </Link>
   )
 }

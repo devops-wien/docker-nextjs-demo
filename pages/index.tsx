@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useCountdown } from 'react-countdown-circle-timer'
 
@@ -11,23 +10,15 @@ const zone = process.env.NEXT_PUBLIC_ZONE ? process.env.NEXT_PUBLIC_ZONE : 'loca
 const zones = ['at-vie-1', 'bg-sof-1', 'ch-dk-2', 'ch-gva-2', 'de-fra-1', 'de-muc-1']
 
 export default function IndexPage() {
-  const [city, setCity] = useState(zone)
-  const [country, setCountry] = useState(setFlag(zone))
-  const router = useRouter()
+  const [city] = useState(zone)
+  const [country] = useState(setFlag(zone))
   const { remainingTime } = useCountdown({ isPlaying: true, duration: 10, colors: '#35a627' })
 
   useEffect(() => {
-    let redirect = zones[Math.floor(Math.random() * 6)]
-    while (city == redirect) redirect = zones[Math.floor(Math.random() * 6)]
-    setTimeout(() => {
-      //TODO: subdomains not available yet
-      //location.href = 'https://' + redirect + '.devops.wien'
-
-      router.reload()
-      setCity(zone)
-      setCountry(setFlag(city))
-    }, 10000)
-  })
+    setTimeout(async () => {
+      location.href = await getAvailableUrlFromDifferentZone(city)
+    }, 9000)
+  }, [city])
 
   return (
     <div>
@@ -79,6 +70,25 @@ export default function IndexPage() {
       </div>
     </div>
   )
+}
+
+function getUrlFromZone(zone: string) {
+  return 'https://nextjs-' + zone + '-dev.devops.wien'
+}
+
+async function zoneIsAvailable(zone: string) {
+  return (await fetch(getUrlFromZone(zone))).ok
+}
+
+async function getAvailableUrlFromDifferentZone(zone: string) {
+  const getRandomNumber = () => Math.floor(Math.random() * zones.length)
+  let redirect = zones[getRandomNumber()]
+  let i = 0
+
+  while (!(await zoneIsAvailable(redirect)) || (zone == redirect && i++ < zones.length))
+    redirect = zones[getRandomNumber()]
+
+  return getUrlFromZone(redirect)
 }
 
 function setFlag(city: string) {
