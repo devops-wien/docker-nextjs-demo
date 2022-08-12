@@ -100,15 +100,11 @@ function setFlag(city: string) {
     case 'at-vie-1':
       flag = '🇦🇹'
       break
-    case 'at-fra-1':
-      flag = '🇩🇪'
-      break
+    case 'de-fra-1':
     case 'de-muc-1':
       flag = '🇩🇪'
       break
     case 'ch-dk-2':
-      flag = '🇨🇭'
-      break
     case 'ch-gva-2':
       flag = '🇨🇭'
       break
