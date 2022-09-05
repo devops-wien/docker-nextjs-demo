@@ -10,7 +10,7 @@ export type Props = {
 
 export const Component: React.FC<Props> = (props) => (
   <h1 className="text-5xl text-center">
-    18.08.2022, 12:00 test - Hello, from Next.js, We are in <span className="text-green-600">{props.target}</span>
+    05.09.2022, 12:00 demo - Hello, from Next.js, We are in <span className="text-green-600">{props.target}</span>
   </h1>
 )
 
