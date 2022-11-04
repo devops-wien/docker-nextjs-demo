@@ -29,7 +29,7 @@
   "dependencies": {
     "@apollo/client": "3.7.1",
     "@testing-library/react": "13.4.0",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "next": "12.3.2",
     "react": "18.2.0",
     "react-countdown-circle-timer": "3.0.9"
@@ -45,7 +45,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/node": "18.11.9",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "@typescript-eslint/eslint-plugin": "5.42.0",
     "@typescript-eslint/parser": "5.42.0",
     "autoprefixer": "10.4.13",
