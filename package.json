@@ -37,7 +37,7 @@
   "devDependencies": {
     "@babel/core": "7.22.1",
     "@babel/plugin-proposal-class-properties": "7.18.6",
-    "@babel/plugin-proposal-private-property-in-object": "7.21.10",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@storybook/addon-essentials": "7.0.18",
     "@storybook/addon-postcss": "2.0.0",
     "@storybook/builder-webpack5": "7.0.18",
