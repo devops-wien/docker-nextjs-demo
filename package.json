@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "3.8.2",
+    "@apollo/client": "3.8.3",
     "@testing-library/react": "13.4.0",
     "@types/react": "18.2.21",
     "next": "12.3.4",
