@@ -8,7 +8,7 @@ const gitRawMediaUrl = 'https://raw.githubusercontent.com/devops-wien/devops-wie
 const zone = process.env.NEXT_PUBLIC_ZONE ? process.env.NEXT_PUBLIC_ZONE : 'local'
 const env_name = process.env.NEXT_PUBLIC_ENV_NAME ? process.env.NEXT_PUBLIC_ENV_NAME : 'dev'
 
-const zones = ['at-vie-1', 'bg-sof-1', 'ch-dk-2', 'ch-gva-2', 'de-fra-1', 'de-muc-1']
+const zones = ['at-vie-1', 'at-vie-2', 'bg-sof-1', 'ch-dk-2', 'ch-gva-2', 'de-fra-1', 'de-muc-1']
 
 export default function IndexPage() {
   const [city] = useState(zone)
@@ -98,6 +98,7 @@ function setFlag(city: string) {
   let flag = ''
   switch (city) {
     case 'at-vie-1':
+    case 'at-vie-2':
       flag = '🇦🇹'
       break
     case 'de-fra-1':
