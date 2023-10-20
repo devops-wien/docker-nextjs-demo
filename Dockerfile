@@ -1,9 +1,9 @@
-FROM node:20 AS build
+FROM node:21 AS build
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
 
-FROM node:20
+FROM node:21
 ADD "entrypoint.sh" "/"
 RUN chmod +x "/entrypoint.sh"
 
