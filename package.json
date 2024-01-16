@@ -44,7 +44,7 @@
     "@storybook/react": "7.6.8",
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
-    "@types/node": "20.11.2",
+    "@types/node": "20.11.3",
     "@types/react": "18.2.48",
     "@typescript-eslint/eslint-plugin": "6.19.0",
     "@typescript-eslint/parser": "6.19.0",
