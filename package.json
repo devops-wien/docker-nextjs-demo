@@ -42,7 +42,7 @@
     "@storybook/addon-postcss": "2.0.0",
     "@storybook/builder-webpack5": "7.6.10",
     "@storybook/react": "7.6.10",
-    "@testing-library/jest-dom": "6.2.0",
+    "@testing-library/jest-dom": "6.2.1",
     "@testing-library/react": "14.1.2",
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
