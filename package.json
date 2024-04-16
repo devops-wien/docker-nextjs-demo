@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@apollo/client": "3.9.11",
-    "@testing-library/react": "14.3.1",
+    "@testing-library/react": "15.0.2",
     "@types/react": "18.2.79",
     "next": "12.3.4",
     "react": "18.2.0",
@@ -43,7 +43,7 @@
     "@storybook/builder-webpack5": "7.6.17",
     "@storybook/react": "7.6.17",
     "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "14.3.1",
+    "@testing-library/react": "15.0.2",
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
     "@typescript-eslint/eslint-plugin": "6.21.0",
